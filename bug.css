@@ -1,0 +1,11 @@
+The CSS specificity rules can lead to unexpected results when multiple selectors target the same element.  For example, a more specific selector might unintentionally override a more general selector that was intended to apply.
+
+```css
+/* Intended style */
+p { color: blue; }
+
+/* Unintended override due to higher specificity */
+#my-paragraph p { color: red; }
+```
+
+In this case, even if `#my-paragraph` is only applied to one paragraph element, its higher specificity means the red color will be applied to all `<p>` elements nested within `#my-paragraph`, potentially breaking the intended blue styling for paragraphs elsewhere.
