@@ -1,0 +1,18 @@
+To resolve the specificity issue, one approach is to use more descriptive class names or avoid using overly specific selectors.  Consider using classes to target the intended elements and apply styles accordingly.
+
+```css
+.blue-paragraph { color: blue; }
+
+.red-paragraph { color: red; }
+```
+
+Then, apply these classes in your HTML:
+
+```html
+<p class="blue-paragraph">This paragraph should be blue.</p>
+<div id="my-paragraph">
+  <p class="red-paragraph">This paragraph should be red.</p>
+</div>
+```
+
+This way, the specificity conflict is avoided, and the styles are applied as intended.
